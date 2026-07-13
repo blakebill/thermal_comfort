@@ -6,13 +6,13 @@
     },
     "step": {
       "init": {
-        "title": "热舒适度设置",
+        "title": "热舒适设置",
         "data": {
           "temperature_sensor": "温度传感器",
           "humidity_sensor": "湿度传感器",
           "poll": "启用轮询",
           "scan_interval": "轮询间隔（秒）",
-          "custom_icons": "使用自定义图标包"
+          "custom_icons": "使用自定义图标"
         }
       }
     }
@@ -29,15 +29,15 @@
     },
     "step": {
       "user": {
-        "title": "热舒适度设置",
+        "title": "热舒适设置",
         "data": {
           "name": "名称",
           "temperature_sensor": "温度传感器",
           "humidity_sensor": "湿度传感器",
           "poll": "启用轮询",
           "scan_interval": "轮询间隔（秒）",
-          "custom_icons": "使用自定义图标包",
-          "enabled_sensors": "启用的传感器"
+          "custom_icons": "使用自定义图标",
+          "enabled_sensors": "要启用的传感器"
         }
       }
     }
@@ -51,16 +51,16 @@
         "name": "露点"
       },
       "dew_point_perception": {
-        "name": "露点体感",
+        "name": "露点舒适度",
         "state": {
-          "dry": "对部分人而言稍显干燥",
+          "dry": "有些人会觉得偏干",
           "very_comfortable": "非常舒适",
           "comfortable": "舒适",
-          "ok_but_humid": "大多数人感觉尚可，但较潮湿",
-          "somewhat_uncomfortable": "有些不适",
-          "quite_uncomfortable": "非常潮湿，相当不适",
-          "extremely_uncomfortable": "极度不适，闷热难耐",
-          "severely_high": "严重偏高，甚至可能危及哮喘等疾病患者的生命"
+          "ok_but_humid": "大多数人感觉尚可，但有些潮湿",
+          "somewhat_uncomfortable": "略感不适",
+          "quite_uncomfortable": "非常潮湿，明显不适",
+          "extremely_uncomfortable": "极度潮湿，闷热难耐",
+          "severely_high": "湿度严重偏高，哮喘患者可能有生命危险"
         }
       },
       "frost_point": {
@@ -72,33 +72,33 @@
           "no_risk": "无风险",
           "unlikely": "不太可能",
           "probable": "可能",
-          "high": "很可能"
+          "high": "风险很高"
         }
       },
       "heat_index": {
-        "name": "酷热指数"
+        "name": "高温热指数"
       },
       "humidex": {
-        "name": "湿热指数"
+        "name": "湿热指数（Humidex）"
       },
       "humidex_perception": {
-        "name": "湿热指数体感",
+        "name": "湿热舒适度",
         "state": {
           "comfortable": "舒适",
           "noticable_discomfort": "略感不适",
           "evident_discomfort": "明显不适",
           "great_discomfort": "非常不适，请避免剧烈活动",
-          "dangerous_discomfort": "危险性不适",
+          "dangerous_discomfort": "危险，极度不适",
           "heat_stroke": "可能中暑"
         }
       },
       "moist_air_enthalpy": {
-        "name": "湿空气焓值"
+        "name": "湿空气焓"
       },
       "relative_strain_perception": {
-        "name": "相对热应变体感",
+        "name": "相对热应激程度",
         "state": {
-          "outside_calculable_range": "超出可计算范围",
+          "outside_calculable_range": "不适用",
           "comfortable": "舒适",
           "slight_discomfort": "轻微不适",
           "discomfort": "不适",
@@ -107,49 +107,49 @@
         }
       },
       "summer_scharlau_perception": {
-        "name": "夏季 Scharlau 体感",
+        "name": "夏季 Scharlau 舒适度",
         "state": {
-          "outside_calculable_range": "超出可计算范围",
+          "outside_calculable_range": "不适用",
           "comfortable": "舒适",
           "slightly_uncomfortable": "稍感不适",
           "moderately_uncomfortable": "中度不适",
-          "highly_uncomfortable": "高度不适"
+          "highly_uncomfortable": "严重不适"
         }
       },
       "winter_scharlau_perception": {
-        "name": "冬季 Scharlau 体感",
+        "name": "冬季 Scharlau 舒适度",
         "state": {
-          "outside_calculable_range": "超出可计算范围",
+          "outside_calculable_range": "不适用",
           "comfortable": "舒适",
           "slightly_uncomfortable": "稍感不适",
           "moderately_uncomfortable": "中度不适",
-          "highly_uncomfortable": "高度不适"
+          "highly_uncomfortable": "严重不适"
         }
       },
       "summer_simmer_index": {
-        "name": "夏季闷热指数"
+        "name": "夏季炎热指数"
       },
       "summer_simmer_perception": {
-        "name": "夏季闷热体感",
+        "name": "夏季炎热舒适度",
         "state": {
           "cool": "凉爽",
           "slightly_cool": "稍凉",
           "comfortable": "舒适",
           "slightly_warm": "稍暖",
-          "increasing_discomfort": "不适感加剧",
-          "extremely_warm": "极度炎热",
+          "increasing_discomfort": "越来越不舒适",
+          "extremely_warm": "酷热难耐",
           "danger_of_heatstroke": "有中暑危险",
           "extreme_danger_of_heatstroke": "中暑危险极高",
-          "circulatory_collapse_imminent": "循环衰竭迫在眉睫"
+          "circulatory_collapse_imminent": "即将发生循环衰竭"
         }
       },
       "thoms_discomfort_perception": {
-        "name": "Thom 不适度体感",
+        "name": "Thom 不适指数",
         "state": {
           "no_discomfort": "无不适",
-          "less_than_half": "不到一半的人感到不适",
-          "more_than_half": "超过一半的人感到不适",
-          "most": "大多数人感到不适，身心状态有所下降",
+          "less_than_half": "部分人感到不适",
+          "more_than_half": "多数人感到不适",
+          "most": "绝大多数人感到不适，身心状态受到影响",
           "everyone": "所有人都感到明显不适",
           "dangerous": "危险且极度不适，可能导致中暑"
         }

@@ -24,7 +24,7 @@ from homeassistant.helpers.service import async_register_admin_service
 from homeassistant.helpers.typing import ConfigType
 
 from .config_flow import get_value
-from .const import DOMAIN, PLATFORMS, UPDATE_LISTENER
+from .const import DOMAIN, PLATFORMS, RUNTIME_DEVICE, UPDATE_LISTENER
 from .sensor import (
     CONF_CUSTOM_ICONS,
     CONF_ENABLED_SENSORS,
@@ -52,13 +52,13 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         CONF_SCAN_INTERVAL: get_value(entry, CONF_SCAN_INTERVAL),
         CONF_CUSTOM_ICONS: get_value(entry, CONF_CUSTOM_ICONS),
     }
-    if get_value(entry, CONF_ENABLED_SENSORS):
-        hass.data[DOMAIN][entry.entry_id][CONF_ENABLED_SENSORS] = get_value(
-            entry, CONF_ENABLED_SENSORS
-        )
+    enabled_sensors = get_value(entry, CONF_ENABLED_SENSORS)
+    if enabled_sensors is not None:
+        hass.data[DOMAIN][entry.entry_id][CONF_ENABLED_SENSORS] = enabled_sensors
         data = dict(entry.data)
-        data.pop(CONF_ENABLED_SENSORS)
-        hass.config_entries.async_update_entry(entry, data=data)
+        if CONF_ENABLED_SENSORS in data:
+            data.pop(CONF_ENABLED_SENSORS)
+            hass.config_entries.async_update_entry(entry, data=data)
 
     if entry.unique_id is None:
         # We have no unique_id yet, let's use backup.
@@ -81,6 +81,8 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Remove entry via user interface."""
     unload_ok = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
     if unload_ok:
+        if runtime_device := hass.data[DOMAIN][entry.entry_id].get(RUNTIME_DEVICE):
+            runtime_device.async_shutdown()
         update_listener = hass.data[DOMAIN][entry.entry_id][UPDATE_LISTENER]
         update_listener()
         hass.data[DOMAIN].pop(entry.entry_id)

@@ -363,6 +363,19 @@ def build_schema(
         registry, hass, SensorDeviceClass.TEMPERATURE, show_advanced
     )
 
+    # Keep an existing entry editable even when one of its source entities is
+    # temporarily unavailable or has been removed from Home Assistant.
+    if config_entry is not None:
+        configured_temperature = get_value(config_entry, CONF_TEMPERATURE_SENSOR)
+        configured_humidity = get_value(config_entry, CONF_HUMIDITY_SENSOR)
+        if (
+            configured_temperature
+            and configured_temperature not in temperature_sensors
+        ):
+            temperature_sensors.append(configured_temperature)
+        if configured_humidity and configured_humidity not in humidity_sensors:
+            humidity_sensors.append(configured_humidity)
+
     if not temperature_sensors or not humidity_sensors:
         return None
 
