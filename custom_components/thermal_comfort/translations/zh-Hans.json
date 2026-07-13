@@ -48,10 +48,10 @@
         "name": "绝对湿度"
       },
       "dew_point": {
-        "name": "露点"
+        "name": "露点温度"
       },
       "dew_point_perception": {
-        "name": "露点舒适度",
+        "name": "露点舒适等级",
         "state": {
           "dry": "有些人会觉得偏干",
           "very_comfortable": "非常舒适",
@@ -64,25 +64,25 @@
         }
       },
       "frost_point": {
-        "name": "霜点"
+        "name": "霜点温度"
       },
       "frost_risk": {
         "name": "结霜风险",
         "state": {
-          "no_risk": "无风险",
-          "unlikely": "不太可能",
-          "probable": "可能",
-          "high": "风险很高"
+          "no_risk": "无结霜风险",
+          "unlikely": "不太可能结霜",
+          "probable": "可能结霜",
+          "high": "结霜风险很高"
         }
       },
       "heat_index": {
-        "name": "高温热指数"
+        "name": "酷热指数"
       },
       "humidex": {
         "name": "湿热指数（Humidex）"
       },
       "humidex_perception": {
-        "name": "湿热舒适度",
+        "name": "湿热舒适等级",
         "state": {
           "comfortable": "舒适",
           "noticable_discomfort": "略感不适",
@@ -96,9 +96,9 @@
         "name": "湿空气焓"
       },
       "relative_strain_perception": {
-        "name": "相对热应激程度",
+        "name": "相对热应激等级",
         "state": {
-          "outside_calculable_range": "不适用",
+          "outside_calculable_range": "超出适用范围",
           "comfortable": "舒适",
           "slight_discomfort": "轻微不适",
           "discomfort": "不适",
@@ -107,9 +107,9 @@
         }
       },
       "summer_scharlau_perception": {
-        "name": "夏季 Scharlau 舒适度",
+        "name": "夏季 Scharlau 舒适等级",
         "state": {
-          "outside_calculable_range": "不适用",
+          "outside_calculable_range": "超出适用范围",
           "comfortable": "舒适",
           "slightly_uncomfortable": "稍感不适",
           "moderately_uncomfortable": "中度不适",
@@ -117,9 +117,9 @@
         }
       },
       "winter_scharlau_perception": {
-        "name": "冬季 Scharlau 舒适度",
+        "name": "冬季 Scharlau 舒适等级",
         "state": {
-          "outside_calculable_range": "不适用",
+          "outside_calculable_range": "超出适用范围",
           "comfortable": "舒适",
           "slightly_uncomfortable": "稍感不适",
           "moderately_uncomfortable": "中度不适",
@@ -127,10 +127,10 @@
         }
       },
       "summer_simmer_index": {
-        "name": "夏季炎热指数"
+        "name": "夏季闷热指数"
       },
       "summer_simmer_perception": {
-        "name": "夏季炎热舒适度",
+        "name": "夏季闷热等级",
         "state": {
           "cool": "凉爽",
           "slightly_cool": "稍凉",
@@ -144,7 +144,7 @@
         }
       },
       "thoms_discomfort_perception": {
-        "name": "Thom 不适指数",
+        "name": "Thom 不适等级",
         "state": {
           "no_discomfort": "无不适",
           "less_than_half": "部分人感到不适",
