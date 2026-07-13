@@ -53,14 +53,14 @@
       "dew_point_perception": {
         "name": "露點舒適等級",
         "state": {
-          "dry": "有些人會覺得偏乾",
+          "dry": "偏乾",
           "very_comfortable": "非常舒適",
           "comfortable": "舒適",
-          "ok_but_humid": "大多數人感覺尚可，但有些潮濕",
+          "ok_but_humid": "尚可，略顯潮濕",
           "somewhat_uncomfortable": "略感不適",
-          "quite_uncomfortable": "非常潮濕，明顯不適",
-          "extremely_uncomfortable": "極度潮濕，悶熱難耐",
-          "severely_high": "濕度嚴重偏高，氣喘患者可能有生命危險"
+          "quite_uncomfortable": "潮濕不適",
+          "extremely_uncomfortable": "極度潮濕不適",
+          "severely_high": "濕度極高"
         }
       },
       "frost_point": {
@@ -70,9 +70,9 @@
         "name": "結霜風險",
         "state": {
           "no_risk": "無結霜風險",
-          "unlikely": "不太可能結霜",
+          "unlikely": "結霜可能性低",
           "probable": "可能結霜",
-          "high": "結霜風險很高"
+          "high": "結霜風險高"
         }
       },
       "heat_index": {
@@ -87,9 +87,9 @@
           "comfortable": "舒適",
           "noticable_discomfort": "略感不適",
           "evident_discomfort": "明顯不適",
-          "great_discomfort": "非常不適，請避免劇烈活動",
-          "dangerous_discomfort": "危險，極度不適",
-          "heat_stroke": "可能中暑"
+          "great_discomfort": "嚴重不適",
+          "dangerous_discomfort": "危險",
+          "heat_stroke": "中暑風險"
         }
       },
       "moist_air_enthalpy": {
@@ -136,22 +136,22 @@
           "slightly_cool": "稍涼",
           "comfortable": "舒適",
           "slightly_warm": "稍暖",
-          "increasing_discomfort": "越來越不舒適",
-          "extremely_warm": "酷熱難耐",
-          "danger_of_heatstroke": "有中暑危險",
-          "extreme_danger_of_heatstroke": "中暑危險極高",
-          "circulatory_collapse_imminent": "即將發生循環衰竭"
+          "increasing_discomfort": "不適感加劇",
+          "extremely_warm": "極度炎熱",
+          "danger_of_heatstroke": "中暑風險",
+          "extreme_danger_of_heatstroke": "中暑風險極高",
+          "circulatory_collapse_imminent": "循環衰竭風險極高"
         }
       },
       "thoms_discomfort_perception": {
         "name": "Thom 不適等級",
         "state": {
           "no_discomfort": "無不適",
-          "less_than_half": "部分人感到不適",
-          "more_than_half": "多數人感到不適",
-          "most": "絕大多數人感到不適，身心狀態受到影響",
-          "everyone": "所有人都感到明顯不適",
-          "dangerous": "危險且極度不適，可能導致中暑"
+          "less_than_half": "部分人不適",
+          "more_than_half": "多數人不適",
+          "most": "絕大多數人不適",
+          "everyone": "所有人明顯不適",
+          "dangerous": "嚴重不適及中暑風險"
         }
       }
     }
